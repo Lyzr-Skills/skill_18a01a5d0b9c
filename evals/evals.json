@@ -1,0 +1,77 @@
+{
+  "skill_name": "pdf-summarizer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I uploaded a research paper on climate change impacts. Can you summarize it for me? The file is research_paper.pdf",
+      "expected_output": "A structured Academic/Research summary with sections: What This Paper Is About, Key Findings, Methodology, Results & Evidence, Conclusions & Implications, Limitations, and Key Takeaway. Uses the academic template with emoji headings.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Summary uses the Academic template with emoji-prefixed section headings (🎯, 🔍, 🧪, 📊, 💡, ⚠️, 📌)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Summary identifies document type as Academic/Research paper",
+          "type": "qualitative"
+        },
+        {
+          "text": "Summary includes a Key Findings section with at least 3 bullet points",
+          "type": "qualitative"
+        },
+        {
+          "text": "Summary ends with an offer to go deeper or answer questions",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Hey, can you give me the TL;DR of this contract my boss sent me? It's called vendor_agreement.pdf and I just need to know the key obligations and if there's anything sketchy.",
+      "expected_output": "A Legal/Contract summary covering: Purpose, Parties Involved, Key Terms & Clauses, Important Obligations, Financial Terms, Termination, and Notable Red Flags. Includes a legal disclaimer. Uses plain language.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Summary uses the Legal/Contract template",
+          "type": "qualitative"
+        },
+        {
+          "text": "Summary flags any notable risks or red flags in a dedicated section",
+          "type": "qualitative"
+        },
+        {
+          "text": "Summary includes a legal disclaimer advising to consult an attorney",
+          "type": "qualitative"
+        },
+        {
+          "text": "Language is in plain English, avoiding unexplained legal jargon",
+          "type": "qualitative"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Summarize this 80-page annual report for me. I need to understand what the company's financial health looks like and what their strategy is going forward. File: annual_report_2024.pdf",
+      "expected_output": "A comprehensive Business/Report summary with Executive Summary, Key Points, Data & Evidence (financial highlights), Recommendations/Strategy, and Bottom Line. Given the 80-page length, the summary should be detailed (~600-900 words) and reference key financial figures.",
+      "files": [],
+      "assertions": [
+        {
+          "text": "Summary uses the Business/Report template with at least 4 sections",
+          "type": "qualitative"
+        },
+        {
+          "text": "Summary includes financial data or metrics (even if placeholder/illustrative)",
+          "type": "qualitative"
+        },
+        {
+          "text": "Summary addresses both financial health and forward strategy as requested",
+          "type": "qualitative"
+        },
+        {
+          "text": "Given 80-page document, summary is detailed and comprehensive (not just 2-3 sentences)",
+          "type": "qualitative"
+        }
+      ]
+    }
+  ]
+}
